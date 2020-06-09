@@ -1,0 +1,41 @@
+####### SECTION 1 - C ----20 mins
+
+1. WAP to write a fibonaci series from 1 to 100-------5 mins
+2. WAP to find the prme number------------------------5 mins
+3. WAP to which will detect whether a Machine is a little endian or big endian----5mins
+4. WAP program to print the fllowing pattern:---------5 mins
+    *
+   ***
+  *****
+ *******
+*********
+
+####### SECTION 2 - DS -----10 mins
+
+1. WAP to detect loop in the link list --------10 mins
+
+
+####### SECTION 3 - OS ---- 25 mins
+
+1. What is the difference between run time and load time libraries-----5 mins
+2. What are the limitations of samaphores and how can they be overcomed----5 mins
+3. What is the difference between detachable and joinable thread-----5 mins
+4. what is a orphan process ---2 mins
+5. What is the difference between signals and interrupts, list 5 signals---5 min
+
+####### SECTION 4 - kernel space programming --- 10 mins
+
+1. write a pseudo code to take command line arguements in a module ---5mins
+2. write a pseudo code for char driver and create a user space pseudo code accessing it --5 mins
+
+
+####### SECTION 5 - Linux build system --- 5 mins
+
+1. write Linux build steps for x86 system --5 mins
+
+####### SECTION 6 - Interview questions ---15 mins
+
+1. Explain the difference between semaphore and Mutex ---5 mins
+2. How will you synchronise 3 threads by using 3 semaphores ---5 mins
+3. Explain the difference between malloc and calloc ---5 mins
+
