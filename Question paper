@@ -39,3 +39,108 @@
 2. How will you synchronise 3 threads by using 3 semaphores ---5 mins
 3. Explain the difference between malloc and calloc ---5 mins
 
+
+
+
+ANSWER
+SECTION 1:
+
+2. WAP to find the prme number------------------------5 mins
+ANSWER:
+   int no;
+   printf("enter a number:\n");
+   scanf("%d",&no);
+   if((no%2)!=0&&(no%3)!=0){
+      printf(" %d is prme number\n",no);
+   }
+   else{
+      printf("%d is not prme number");
+   }
+   
+   SECTION 3:
+   
+   1. What is the difference between run time and load time libraries-----5 mins
+      1.run time : we link libraries at excution time
+        load time : we link libraries at load time
+      2.run time : libraries prefer when we want only in perticular area in program. 
+        load time : labraries prefer when we want whole program.
+      
+      
+   3. What is the difference between detachable and joinable thread-----5 mins
+      joinable thread are wait till main process can terminate,where detachable thread are not depend on main thread after the completion they ill be terminate.
+     
+     
+   5. What is the difference between signals and interrupts, list 5 signals---5 min
+      interrupt have high priority compare to signals.
+      
+      list of signals:
+      1.siginit
+      2.sigkill
+      3.sigchild
+      4.
+      
+      
+   SECTION 4:
+   
+   1. write a pseudo code to take command line arguements in a module ---5mins
+      
+      module_param(variable,variable type,permission);
+     
+  2. write a pseudo code for char driver and create a user space pseudo code accessing it --5 mins
+      #define MAJORNO 190
+      #define MINARNO 0
+      
+      static dev_t mydev;
+      struct cdev *mycdev;
+      
+      int __init my_init(void){
+         int ret;
+         1.create device number and register it. 
+         mydev=MKDEV(MAJORNO,MINARNO);
+         ret=register_chrdev_region(mydev,1,"mydriver");
+         
+         2. allocate memmory for character driver.
+         mycdev=cdev_alloc();
+         
+         3. initilaze with file operation.
+         cdev_init(mycdev,fops);
+         
+         4. add to vfs
+         cdev_add(mycdev,mydev,1);
+         
+         return 0;
+      }
+      
+      int __exit my_exit(){
+         1. dellocate memmory
+         cdev_del(mycdev);
+         
+         2.unregister devcie number.
+         unregister_chrdev_region(mydev);
+      }
+      
+      
+   SECTION 5:
+   
+   1. write Linux build steps for x86 system --5 mins
+      
+      STEP 1 : download letest version of linux.
+      STEP 2 : untar the file and cd linux
+      STEP 3 : make menuconfig
+      STEP 4 : make
+      STEP 5 : make module_install
+      STEP 6 : make install
+      STEP 7 : restart system
+      STEP 8 : select you new linux
+      
+     
+     SECTION 6:
+     
+     3. Explain the difference between malloc and calloc ---5 mins
+      both are use for dynamically memmory allocation.
+      but differece is whenever you allocate memory with calloc they initialize with 0 other hand malloc not initize with 0 they have garbage value.
+      
+      
+      
+      
+      
